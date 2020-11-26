@@ -81,7 +81,8 @@
 		fmulp					; st(0) = f(x)*f"(x)
 
 		call	funcDerivative1	; st(0) = f'(x)
-		call	funcDerivative1	; st(0) = f'(x)
+		fld		st(0)			; st(0) = f'(x), st(1) = f'(x)
+		;call	funcDerivative1	; st(0) = f'(x)
 		fmulp					; st(0) = (f'(x))^2
 		fld		two				; st(0) = 2
 		fmulp					; st(0) = 2*(f'(x))^2
